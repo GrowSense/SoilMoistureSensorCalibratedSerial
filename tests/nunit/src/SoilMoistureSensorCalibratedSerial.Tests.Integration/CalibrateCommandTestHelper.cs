@@ -3,14 +3,14 @@ using System.Threading;
 
 namespace SoilMoistureSensorCalibratedSerial.Tests.Integration
 {
-    public class CalibrateCommandTestHelper : SerialCommandTestHelper
-    {
-        public int RawSoilMoistureValue = 0;
+  public class CalibrateCommandTestHelper : SerialCommandTestHelper
+  {
+    public int RawSoilMoistureValue = 0;
 
-        public void TestCalibrateCommand ()
-        {
-            Value = RawSoilMoistureValue;
-            TestCommand ();
-        }
+    public void TestCalibrateCommand ()
+    {
+      Value = RawSoilMoistureValue.ToString ();
+      TestCommand ();
     }
+  }
 }

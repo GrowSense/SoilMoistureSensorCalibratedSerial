@@ -1,6 +1,9 @@
 #ifndef SOILMOISTURESENSOR_H_
 #define SOILMOISTURESENSOR_H_
 
+#define SOIL_MOISTURE_SENSOR_TYPE_RESISTIVE 0
+#define SOIL_MOISTURE_SENSOR_TYPE_CAPACITIVE 1
+
 extern int soilMoistureSensorType;
 
 extern int soilMoistureLevelCalibrated;
@@ -16,6 +19,7 @@ extern int wetSoilMoistureCalibrationValue;
 extern bool soilMoistureSensorIsOn;
 extern unsigned long lastSensorOnTime;
 extern int delayAfterTurningSensorOn;
+extern bool soilMoistureSensorGetsTurnedOff;
 extern bool soilMoistureSensorReadingHasBeenTaken;
 
 void setupSoilMoistureSensor();

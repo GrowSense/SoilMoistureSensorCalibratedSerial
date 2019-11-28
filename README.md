@@ -3,10 +3,11 @@ A sketch for a calibrated arduino soil moisture sensor which outputs data via se
 
 ## Status
 
-|    | master | dev |
-| ------------- | ------------- | ------------- |
-| Travis CI Build  | [![Build Status](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial.svg?branch=master)](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial)  | [![Build Status](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial.svg?branch=dev)](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial)  |
-| Jenkins Hardware Test  | [![Build Status](http://greensense.hopto.org:8080/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/master/badge/icon)](http:/greensense.hopto.org:8080/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/master/)  | [![Build Status](http://greensense.hopto.org:8080/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/dev/badge/icon)](http:/greensense.hopto.org:8080/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/dev/)  |
+|   | lts | master | dev |
+| ------------- | ------------- | ------------- | ------------- |
+| Travis CI Tests  | [![Build Status](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial.svg?branch=lts)](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial) | [![Build Status](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial.svg?branch=master)](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial) | [![Build Status](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial.svg?branch=dev)](https://travis-ci.org/GrowSense/SoilMoistureSensorCalibratedSerial) |
+| Jenkins Software Build  | [![Build Status](http://growsense.io:8090/buildStatus/icon?job=GrowSense%2FSoilMoistureSensorCalibratedSerial%2Flts)](http://growsense.io:8090/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/lts/) | [![Build Status](http://growsense.io:8090/buildStatus/icon?job=GrowSense%2FSoilMoistureSensorCalibratedSerial%2Fmaster)](http://growsense.io:8090/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/master/)  | [![Build Status](http://growsense.io:8090/buildStatus/icon?job=GrowSense%2FSoilMoistureSensorCalibratedSerial%2Fdev)](http://growsense.io:8090/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/dev/) |
+| Jenkins Hardware Tests | [![Build Status](http://growsense.io:8100/buildStatus/icon?job=GrowSense%2FSoilMoistureSensorCalibratedSerial%2Flts&subject=tests)](http://growsense.io:8100/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/lts/) | [![Build Status](http://growsense.io:8100/buildStatus/icon?job=GrowSense%2FSoilMoistureSensorCalibratedSerial%2Fmaster&subject=tests)](http://growsense.io:8100/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/master/)  | [![Build Status](http://growsense.io:8100/buildStatus/icon?job=GrowSense%2FSoilMoistureSensorCalibratedSerial%2Fdev&subject=tests)](http://growsense.io:8100/job/GrowSense/job/SoilMoistureSensorCalibratedSerial/job/dev/) |
 
 ## Clone the Index
 If you intend to use more than one software component from the GrowSense group it is recommended you clone the entire index.

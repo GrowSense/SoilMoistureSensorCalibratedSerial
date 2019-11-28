@@ -2,17 +2,17 @@
 
 namespace SoilMoistureSensorCalibratedSerial.Tests.Integration
 {
-    public class ReadIntervalCommandTestHelper : SerialCommandTestHelper
+  public class ReadIntervalCommandTestHelper : SerialCommandTestHelper
+  {
+    public int ReadingInterval = 3;
+
+    public void TestSetReadIntervalCommand ()
     {
-        public int ReadingInterval = 3;
+      Key = "I";
+      Value = ReadingInterval.ToString ();
+      Label = "reading interval";
 
-        public void TestSetReadIntervalCommand ()
-        {
-            Letter = "I";
-            Value = ReadingInterval;
-            Label = "reading interval";
-
-            TestCommand ();
-        }
+      TestCommand ();
     }
+  }
 }
