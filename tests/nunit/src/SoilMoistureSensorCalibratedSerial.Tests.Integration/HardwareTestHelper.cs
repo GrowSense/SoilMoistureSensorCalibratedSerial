@@ -26,9 +26,9 @@ namespace SoilMoistureSensorCalibratedSerial.Tests.Integration
     public int AnalogPinMaxValue = 1023;
     public bool On = true;
     public bool Off = false;
-    public string FullDeviceOutput;
+    public string FullDeviceOutput = "";
     public int ResetTriggerPin = 4;
-    public string IrrigatorStartText = "Starting irrigator";
+    public string DeviceStartText = "Starting soil moisture monitor";
     public string DeviceOnlineText = "Online";
     public TimeoutHelper Timeout = new TimeoutHelper ();
 
@@ -185,8 +185,8 @@ namespace SoilMoistureSensorCalibratedSerial.Tests.Integration
       // Re-open the connection to the device
       ConnectDevice ();
 
-      // Ensure the irrigator restarted
-      WaitForText (IrrigatorStartText);
+      // Wait for the devices to connect
+      WaitForDevicesToConnect ();
     }
     #endregion
     #region Write to Device Functions

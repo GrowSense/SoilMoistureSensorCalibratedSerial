@@ -22,6 +22,8 @@ void setup()
   setupSoilMoistureSensor();
 
   serialOutputIntervalInSeconds = soilMoistureSensorReadingIntervalInSeconds;
+  
+  Serial.println("Online");
 }
 
 void loop()
