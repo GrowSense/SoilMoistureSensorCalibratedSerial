@@ -5,6 +5,14 @@ if [ ! $BOARD_TYPE ]; then
   exit 1
 fi
 
-SOURCE_FILE="src/SoilMoistureSensorCalibratedSerial/SoilMoistureSensorCalibratedSerial.ino"
+echo "Injecting board type into sketch..."
+echo "  Board type: $BOARD_TYPE"
 
-sed -i "s/#define BOARD_TYPE .*/#define BOARD_TYPE \"$BOARD_TYPE\"/" $SOURCE_FILE
+SOURCE_FILE="src/SoilMoistureSensorCalibratedSerial/Common.h"
+
+echo "  Source file:"
+echo "    $SOURCE_FILE"
+
+sed -i "s/#define BOARD_TYPE .*/#define BOARD_TYPE \"$BOARD_TYPE\"/" $SOURCE_FILE || exit 1
+
+echo "Finished injecting board type into sketch."
