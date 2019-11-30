@@ -11,12 +11,12 @@ else
   FULL_VERSION=$VERSION_ARGUMENT
 fi
 
-echo "Version: $FULL_VERSION"
+echo "  Version: $FULL_VERSION"
 
-SOURCE_FILE="src/SoilMoistureSensorCalibratedSerial/SoilMoistureSensorCalibratedSerial.ino"
+SOURCE_FILE="src/SoilMoistureSensorCalibratedSerial/Common.h"
 
-echo "Source file:"
-echo "$SOURCE_FILE"
+echo "  Source file:"
+echo "    $SOURCE_FILE"
 
 sed -i "s/#define VERSION .*/#define VERSION \"$FULL_VERSION\"/" $SOURCE_FILE || exit 1
 
