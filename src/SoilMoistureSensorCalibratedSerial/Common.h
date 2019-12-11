@@ -21,7 +21,5 @@ int readInt(char* text, int startPosition, int digitCount);
 unsigned long secondsToMilliseconds(int seconds);
 float millisecondsToSecondsWithDecimal(int milliseconds);
 
-void forceSerialOutput();
-
 #endif
 /* COMMON_H_ */

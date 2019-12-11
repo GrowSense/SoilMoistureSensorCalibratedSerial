@@ -12,6 +12,8 @@ void serialPrintDeviceInfo()
   Serial.println("Family: GrowSense");
   Serial.println("Group: monitor");
   Serial.println("Project: SoilMoistureSensorCalibratedSerial");
+  Serial.print("Device name: ");
+  Serial.println(deviceName);
   Serial.print("Board: ");
   Serial.println(BOARD_TYPE);
   Serial.print("Version: ");

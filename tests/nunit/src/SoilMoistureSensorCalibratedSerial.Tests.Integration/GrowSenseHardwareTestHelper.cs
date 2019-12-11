@@ -71,8 +71,8 @@ namespace SoilMoistureSensorCalibratedSerial.Tests.Integration
       var output = String.Empty;
       var wasMessageReceived = false;
 
-      var startTime = DateTime.Now;
-
+      Timeout.Start ();
+                     
       while (!wasMessageReceived) {
         output += ReadLineFromDevice ();
 
@@ -80,17 +80,11 @@ namespace SoilMoistureSensorCalibratedSerial.Tests.Integration
         if (output.Contains (expectedText)) {
           wasMessageReceived = true;
 
-          //Console.WriteLine ("  Message was received");
+          Console.WriteLine ("  Message was received");
 
-          //ConsoleWriteSerialOutput (output);
-        }
-
-        var hasTimedOut = DateTime.Now.Subtract (startTime).TotalSeconds > TimeoutWaitingForResponse;
-        if (hasTimedOut && !wasMessageReceived) {
           ConsoleWriteSerialOutput (output);
-
-          Assert.Fail ("Timed out waiting for message received (" + TimeoutWaitingForResponse + " seconds)");
-        }
+        } else
+          Timeout.Check (TimeoutWaitingForResponse, "Timed out waiting for text '" + expectedText + "'.");
       }
     }
     #endregion
