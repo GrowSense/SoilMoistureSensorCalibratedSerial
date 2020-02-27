@@ -195,7 +195,7 @@ void takeSoilMoistureSensorReading()
 
 double getAverageSoilMoistureSensorReading()
 {
-  int readingSum  = 0;
+  long readingSum = 0;
   int totalReadings = 10;
 
   for (int i = 0; i < totalReadings; i++)

@@ -12,7 +12,7 @@ void checkCommand()
     Serial.println("Checking incoming serial commands");
   }*/
 
-  if (checkMsgReady())
+  while (checkMsgReady())
   {
     char* msg = getMsg();
        
@@ -27,11 +27,6 @@ void handleCommand(char* msg)
     Serial.println("");
     Serial.println("Handling command...");  
   }
-
-  Serial.print("Received message: ");
-  Serial.println(msg);
-        
-  char letter = msg[0];
 
   Serial.print("Received message: ");
   Serial.println(msg);
@@ -61,6 +56,8 @@ void handleCommand(char* msg)
   }
   else
   {
+    char letter = msg[0];
+
     switch (letter)
     {
       case '#':
