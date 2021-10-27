@@ -3,8 +3,18 @@ image: localhost:5000/ubuntu-loaded
 stages:
   - build
 
+init-job:
+  stage: init
+  script:
+    - sh init.sh
+    
+inject-version-job:
+  stage: injectversion
+  script:
+    - sh inject-version.sh
+    
 build-job:
   stage: build
   script:
-    - sh build.sh
+    - sh build-all.sh
     
