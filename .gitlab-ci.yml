@@ -1,6 +1,8 @@
 image: localhost:5000/ubuntu-loaded
 
 stages:
+  - init
+  - injectversion
   - build
 
 init-job:
