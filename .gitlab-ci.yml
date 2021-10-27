@@ -1,0 +1,10 @@
+image: localhost:5000/ubuntu-loaded
+
+stages:
+  - build
+
+build-job:
+  stage: build
+  script:
+    - sh build.sh
+    
